@@ -1,8 +1,8 @@
 import africastalking
 
 # Set up your credentials
-username = "YOUR_USERNAME"
-api_key = "YOUR_API_KEY"
+username = "kiash"
+api_key = "0804fc11a4dbeb6dbe78fafa7bd337e16f49271c7ab33854f3c4572d5d80a4e1"
 
 # Initialize the Africa's Talking SDK
 africastalking.initialize(username, api_key)
