@@ -8,7 +8,6 @@ username = config('USERNAME')
 api_key = config('API_KEY')
 africastalking.initialize(username, api_key)
 
-# Define the USSD handler function
 @csrf_exempt
 def ussd_callback(request):
     # Get the POST parameters
@@ -16,6 +15,12 @@ def ussd_callback(request):
     phone_number = request.POST.get('phoneNumber')
     service_code = request.POST.get('serviceCode')
     text = request.POST.get('text')
+
+    # Check if text is None
+    if text is None:
+        # Return an error response
+        response = 'END An error occurred\n'
+        return HttpResponse(response)
 
     # Split the text into an array of strings
     text_array = text.split('*')

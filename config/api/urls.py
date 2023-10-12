@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import Ussd
+from .views import ussd_callback
 
 app_name = 'api'
 
 urlpatterns = [
-    path('ussd/', Ussd.as_view(), name='ussd'),
+    path('', ussd_callback, name='ussd'),
 ]
