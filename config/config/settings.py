@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     
     #app installatiion
     'api',
+    'sms',
   
 ]
 
